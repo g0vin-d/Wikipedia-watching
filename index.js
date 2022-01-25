@@ -15,10 +15,11 @@ eventSource.onopen = function (event) {
 
   setInterval(() => {
     intervalHandler(5, 60);
+    oneMinute += 1;
   }, 1 * 60 * 1000);
 
   setInterval(() => {
-    intervalHandler(5, 50);
+    intervalHandler(5, 60);
   }, 5 * 60 * 1000);
 };
 
@@ -38,7 +39,6 @@ const intervalHandler = (minutes, seconds) => {
       oneMinute > 5 ? oneMinute - 5 : 0
     }-${oneMinute} data`
   );
-  oneMinute += 1;
   const windowStart = Date.now();
   const windowTime = minutes * seconds * 1000;
   const { noOfDomains, domains, users } = generateReport(
