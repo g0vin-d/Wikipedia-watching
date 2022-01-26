@@ -16,7 +16,7 @@ eventSource.onopen = function (event) {
   setInterval(() => {
     intervalHandler(5, 60);
     oneMinute += 1;
-  }, 1 * 5 * 1000);
+  }, 1 * 60 * 1000);
 
   setInterval(() => {
     intervalHandler(5, 60);
