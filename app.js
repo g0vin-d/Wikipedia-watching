@@ -27,9 +27,9 @@ exports.generateReport = (revisions, window, windowTime) => {
     if (rev.domain === 'en.wikipedia.org' && !rev.isBot) {
       if (
         userReport[rev.user] &&
-        userReport[rev.user].pageEditCount > rev.userEditCount
+        userReport[rev.user].pageEditCount < rev.userEditCount
       ) {
-        userReport[rev.user].pageEditCount = re.userEditCount;
+        userReport[rev.user].pageEditCount = rev.userEditCount;
       } else {
         userReport[rev.user] = {
           user: rev.user,
