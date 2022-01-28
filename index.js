@@ -17,10 +17,6 @@ eventSource.onopen = function (event) {
     intervalHandler(5, 60);
     oneMinute += 1;
   }, 1 * 60 * 1000);
-
-  setInterval(() => {
-    intervalHandler(5, 60);
-  }, 5 * 60 * 1000);
 };
 
 // on connection error
